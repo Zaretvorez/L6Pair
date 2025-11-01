@@ -4,8 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porshe</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">PORSCHE</div>
+        <nav>
+          <ul>
+            <li><a href="#models" class="nav-link">Модели</a></li>
+            <li><a href="#history" class="nav-link">История</a></li>
+            <li><a href="#technology" class="nav-link">Технологии</a></li>
+            <li><a href="#configurator" class="nav-link">Конфигуратор</a></li>
+          </ul>
+        </nav>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Поиск моделей..."
+          id="searchInput"
+        />
+      </div>
+    </header>
 
+    <div class="breadcrumbs" id="breadcrumbs">
+      <a href="#models" class="breadcrumb">Модели</a>
+    </div>
+
+    <main id="content"></main>
+
+    <footer>
+      <p>Porsche Universe &copy; 2024. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
