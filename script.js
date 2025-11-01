@@ -4,7 +4,7 @@ const porscheData = {
             id: '911',
             name: '911 Carrera',
             price: 120000,
-            image: '911',
+            image: 'img/carrera.jpg',
             specs: {
                 engine: '3.0L Twin-Turbo',
                 power: '385 л.с.',
@@ -18,7 +18,7 @@ const porscheData = {
             id: 'taycan',
             name: 'Taycan Turbo',
             price: 150000,
-            image: 'taycan',
+            image: 'img/Taycan.png',
             specs: {
                 engine: 'Электродвигатель',
                 power: '625 л.с.',
@@ -32,7 +32,7 @@ const porscheData = {
             id: 'cayenne',
             name: 'Cayenne Turbo',
             price: 110000,
-            image: 'cayenne',
+            image: 'img/cayenne.png',
             specs: {
                 engine: '4.0L V8 Twin-Turbo',
                 power: '550 л.с.',
@@ -46,7 +46,7 @@ const porscheData = {
             id: 'panamera',
             name: 'Panamera 4S',
             price: 105000,
-            image: 'panamera',
+            image: 'img/Panamera.png',
             specs: {
                 engine: '2.9L V6 Twin-Turbo',
                 power: '440 л.с.',
@@ -221,10 +221,11 @@ function renderModelDetail(modelId) {
     const title = createElement('h1', {}, model.name);
     content.appendChild(title);
 
-    const image = createElement('div', {
-        className: 'model-image',
-        style: 'height: 300px; margin: 1rem 0;'
-    }, `Изображение ${model.name}`);
+    const image = createElement('img', {
+        src: model.image,
+        alt: model.name,
+        style: 'width: 100%; height: 300px; object-fit: cover; border-radius: 8px;'
+    });
 
     const specs = createElement('div', { className: 'model-info' });
     specs.appendChild(createElement('h3', {}, 'Характеристики'));
